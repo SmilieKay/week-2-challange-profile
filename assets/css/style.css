@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+.body {display: flex;
+flex-wrap: wrap;}
+/* Commenting this out until I have help  
+.hero {
+  margin-bottom: 25px;
+  background-image: url(..\images\PA030339.JPG);
+  padding-top: 200px;
+  padding-bottom: 200px;
+} */
+
+/* experimenting...*/
+img {width: 25%;
+height: 25%;}
+
+.header {
+  position: relative;
+  text-align: center;
+  color: azure;
+  font-family: serif;
+  background: blueviolet;
+  padding: 60px;
+  }
+  .project1 {
+    background: blue;
+    text-align: left;
+    color: black;
+    font-family: serif;
+    padding: 20px 10px;
+    border:solid #ff0000;
+    height: 250px;
+    width: 500px;
+  }
+  .project2 {background: yellow;
+  text-align: center;
+color: black;
+font-family: serif;
+padding: 20px 10px;
+border: solid orange;
+height: 250px;
+width: 500px;}
+
+.project3 {background:pink;
+text-align: right;
+color: black;
+font-family: serif;
+padding: 20px 10px;
+border:solid purple;
+height: 250px;
+width: 500px;}

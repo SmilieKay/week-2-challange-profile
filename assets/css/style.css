@@ -1,52 +1,166 @@
-* {
-  box-sizing: border-box;
+/* downloaded font for website*/
+@font-face {
+  font-family: Lobster;
+  src: url(../fonts/Lobster/Lobster-Regular.ttf);
 }
-.body {display: flex;
-flex-wrap: wrap;}
-/* Commenting this out until I have help  
-.hero {
-  margin-bottom: 25px;
-  background-image: url(..\images\PA030339.JPG);
-  padding-top: 200px;
-  padding-bottom: 200px;
-} */
-
-/* experimenting...*/
-img {width: 25%;
-height: 25%;}
-
-.header {
-  position: relative;
+/*makes the background dark and sets the general font and size for font*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #201f1f;
+}
+/*allows the website to preload the background images so they don't flicker the first time*/
+body:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+content: url(../images/facebook.jpg) url(../images/email-color.jpg) url(../images/smoke-b&w.jpg);
+}
+/*makes the cursor a pointer for links*/
+a {
+  cursor: pointer;
+}
+/*The styling for the header allows the height, width, movement with flex and a gradient background color*/
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(
+    to bottom right,
+    #000087,
+    #ff00ff,
+    #00ffff,
+    #5f00af
+  );
+}
+/*use below code if I make a logo for myself I am toying with the idea of using this in the future*/
+/*.header-main-logo{
+width: 120px;
+height: 100%;
+background-color: yellow;
+padding-left: 60px;
+display: flex;
+}
+header-main-logo{
+    height: 30px;
+    align-self: center;
+}*/
+/* the styling for my name on the top of the page sets the font family, size, makes it centered and has the letters transparent I had to use the webkit-background to get the color to show through on the letters not sure why background-clip:text would not work */
+.name{
+  font-family: Lobster;
+  font-size: 60px;
   text-align: center;
-  color: azure;
-  font-family: serif;
-  background: blueviolet;
-  padding: 60px;
-  }
-  .project1 {
-    background: blue;
-    text-align: left;
-    color: black;
-    font-family: serif;
-    padding: 20px 10px;
-    border:solid #ff0000;
-    height: 250px;
-    width: 500px;
-  }
-  .project2 {background: yellow;
+  color: transparent;
+  background-image: linear-gradient(
+    60deg,
+    #000087,
+    #ff00ff,
+    #00ffff,
+    #5f00af
+  );
+  -webkit-background-clip: text;
+}
+/*this is the styling for the about me paragraph*/
+.about-me{
+  font-size: 18px;
   text-align: center;
-color: black;
-font-family: serif;
-padding: 20px 10px;
-border: solid orange;
-height: 250px;
-width: 500px;}
+  color: white;
+}
+/*this is the styling for the main navigation bar*/
+.header-main-nav {
+  width: fit-content;
+  height: 100%;
+  font-weight: bold;
+  }
+/* this provides the styling for the list items in the navigation bar*/
+.header-main-nav ul li {
+  display: inline;
+  float: left;
+  margin-left: 30px;
+}
+/*this provides the styling for the links in the navigation bar the links currently do not go anywhere but they will be added in the future*/
+.header-main-nav ul li a {
+  padding: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 100px;
+  color: #000;
+  display: block;
+  height: 100%;
+  }
+  /*this changes the text color of the list items in the navigation bar when the mouse is hovered over it */
+.header-main-nav ul li a:hover {
+  color: #00ffff;
+}
+/*this provides the styling for the social media links in the header*/
+.header-main-sm {
+  width: fit-content;
+  height: 100%;
+  padding-right: 60px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+/*this provides the black and white facebook logo that is in the header it also sets the size*/
+.header-main-sm-fb {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/facebook-b&w.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*this allows the color facebook logo to show when the mouse is hovered over it*/
+.header-main-sm-fb:hover {
+  background-image: url(../images/facebook.jpg);
+}
+/*this provides the black and white email logo that is in the header */
+.header-main-sm-email {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/email-b&w.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*this allows the color email logo to show when the mouse is hovered over it */
+.header-main-sm-email:hover {
+  background-image: url(../images/email-color.jpg);
+}
 
-.project3 {background:pink;
-text-align: right;
-color: black;
-font-family: serif;
-padding: 20px 10px;
-border:solid purple;
-height: 250px;
-width: 500px;}
+/*this is the styling for all of the h2 on the page*/
+h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+/*this is the styling for items in class card it allows the background image to be a photo and for color to be set to white*/
+.card {
+  width: 750px;
+  height: 350px;
+  background-image: url(../images/marek-piwnicki-2HJNJwyjAyY-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+/*this allows the black and white image to show when the mouse is hovered over the items in card */
+.card:hover {
+  background-image: url(../images/smoke-b&w.jpg);
+}
+/*this section has the styling for the h3 inside of card it sets the background color text size and color and alignment*/
+.card h3 {
+  background-color: aqua;
+  width: 150px;
+  height: 65px;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: baseline;
+  font-weight: bolder;
+  font-size: 18px;
+}

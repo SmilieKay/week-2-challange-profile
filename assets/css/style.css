@@ -1,8 +1,8 @@
-/* downloaded font for website*/
-@font-face {
-  font-family: Lobster;
-  src: url(../fonts/Lobster/Lobster-Regular.ttf);
+/* allows me to create variables and use them in the whole stylesheet*/
+:root {
+  --gradient-colors: #000087, #ff00ff, #00ffff, #5f00af;
 }
+
 /*makes the background dark and sets the general font and size for font*/
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -16,25 +16,63 @@ body:after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-content: url(../images/facebook.jpg) url(../images/email-color.jpg) url(../images/smoke-b&w.jpg);
+  content: url(../images/facebook.jpg) url(../images/email-color.jpg)
+    url(../images/smoke-b&w.jpg);
+}
+.wrapper-main{
+  width: 1300px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 26px;
+  line-height: 32px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+/*sets the style for all of the h2 elements*/
+h2 {
+  font-size: 28px;
+  line-height: 32px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+/*default styling for h3 */
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* sets the style for all paragraph elements*/
+p {
+  font-size: 14px;
+  line-height: 30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /*makes the cursor a pointer for links*/
 a {
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 /*The styling for the header allows the height, width, movement with flex and a gradient background color*/
 .header-main {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100px;
-  background-image: linear-gradient(
-    to bottom right,
-    #000087,
-    #ff00ff,
-    #00ffff,
-    #5f00af
-  );
+  background-image: linear-gradient(to bottom right, var(--gradient-colors));
 }
 /*use below code if I make a logo for myself I am toying with the idea of using this in the future*/
 /*.header-main-logo{
@@ -48,33 +86,13 @@ header-main-logo{
     height: 30px;
     align-self: center;
 }*/
-/* the styling for my name on the top of the page sets the font family, size, makes it centered and has the letters transparent I had to use the webkit-background to get the color to show through on the letters not sure why background-clip:text would not work */
-.name{
-  font-family: Lobster;
-  font-size: 60px;
-  text-align: center;
-  color: transparent;
-  background-image: linear-gradient(
-    60deg,
-    #000087,
-    #ff00ff,
-    #00ffff,
-    #5f00af
-  );
-  -webkit-background-clip: text;
-}
-/*this is the styling for the about me paragraph*/
-.about-me{
-  font-size: 18px;
-  text-align: center;
-  color: white;
-}
+
 /*this is the styling for the main navigation bar*/
 .header-main-nav {
   width: fit-content;
   height: 100%;
   font-weight: bold;
-  }
+}
 /* this provides the styling for the list items in the navigation bar*/
 .header-main-nav ul li {
   display: inline;
@@ -89,8 +107,8 @@ header-main-logo{
   color: #000;
   display: block;
   height: 100%;
-  }
-  /*this changes the text color of the list items in the navigation bar when the mouse is hovered over it */
+}
+/*this changes the text color of the list items in the navigation bar when the mouse is hovered over it */
 .header-main-nav ul li a:hover {
   color: #00ffff;
 }
@@ -128,39 +146,21 @@ header-main-logo{
   background-image: url(../images/email-color.jpg);
 }
 
-/*this is the styling for all of the h2 on the page*/
-h2 {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-}
-/*this is the styling for items in class card it allows the background image to be a photo and for color to be set to white*/
-.card {
-  width: 750px;
-  height: 350px;
-  background-image: url(../images/marek-piwnicki-2HJNJwyjAyY-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  display: grid;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-/*this allows the black and white image to show when the mouse is hovered over the items in card */
-.card:hover {
-  background-image: url(../images/smoke-b&w.jpg);
-}
-/*this section has the styling for the h3 inside of card it sets the background color text size and color and alignment*/
-.card h3 {
-  background-color: aqua;
-  width: 150px;
-  height: 65px;
-  color: black;
+/*Footer*/
+.footer-main {
+  width: 100%;
+  padding: 60px 0 100px;
+  background-color:#201f1f;
+  }
+  .footer-main-flex {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
-  align-self: baseline;
-  font-weight: bolder;
-  font-size: 18px;
 }
+.footer-contact a {
+padding: 10px 20px;
+border: 4px solid #fff;
+}
+.footer-sitemap {
+ flex-basis: 100%;
+  }

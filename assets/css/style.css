@@ -20,7 +20,7 @@ body:after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url(../images/facebook.jpg) url(../images/email-color.jpg);
+  content: url(../images/facebook-round-color.png) url(../images/email-color2.png);
 }
 /*allows for a general set size*/
 .wrapper-main {
@@ -130,25 +130,25 @@ header-main-logo{
 .header-main-sm-fb {
   width: 2rem;
   height: 2rem;
-  background-image: url(../images/facebook-b&w.jpg);
+  background-image: url(../images/facebook-circular-logo.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 /*this allows the color facebook logo to show when the mouse is hovered over it*/
 .header-main-sm-fb:hover {
-  background-image: url(../images/facebook.jpg);
+  background-image: url(../images/facebook-round-color.png);
 }
 /*this provides the black and white email logo that is in the header */
 .header-main-sm-email {
   width: 2rem;
   height: 2rem;
-  background-image: url(../images/email-b&w.jpg);
+  background-image: url(../images/email.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 /*this allows the color email logo to show when the mouse is hovered over it */
 .header-main-sm-email:hover {
-  background-image: url(../images/email-color.jpg);
+  background-image: url(../images/email-color2.png);
 }
 
 /*Footer*/
@@ -205,7 +205,7 @@ header-main-logo{
   display: none;
 }
 /*Responsive styling allows for different screen sizes*/
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   /*my burger menu is currently for display only until I have learned some more about javaScript*/
   .burger-menu-btn{
     display: block;

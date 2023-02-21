@@ -241,6 +241,7 @@ main .main-quotes p:nth-child(2) {
 margin: 0 auto;
 }
 }
+/* !I am still working on the below code and getting it to work properly  */
 /* controls the styling for bigger then 600px */
 /* /*@media screen and (min-width: 601px),(max-width: 1100px) { 
   .wrapper-main {

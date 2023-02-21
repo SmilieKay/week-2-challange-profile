@@ -2,7 +2,7 @@
 :root {
   --gradient-colors: #000087, #ff00ff, #00ffff, #5f00af;
 }
-/*sets the font size to 10px but using percentages so it will be adjust for those that have their perfered font size larger. Setting the font to 10px makes it easier to determine the 
+/*sets the font size to 10px but using percentages so it will be adjust for those that have their preferred font size larger. Setting the font to 10px makes it easier to determine the 
 size in rem for the font. */
 html {
   font-size: 62.5%;

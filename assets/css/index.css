@@ -1,5 +1,6 @@
 :root {
   --word-colors: #00ffff, #000087, #ff00ff;
+  --gradient-colors: #000087, #ff00ff, #00ffff, #5f00af;
 }
 .wrapper-main {
   width: 1200px;
@@ -25,9 +26,16 @@ main .main-intro h1 {
   color: transparent;
   background-image: linear-gradient(140deg, var(--word-colors));
   -webkit-background-clip: text;
+   background-size: 300%; 
   font-size: 7.3rem;
   line-height: 1.2;
   text-shadow: 0px 3px 1px white;
+  background-size: 400%;
+  animation: bg-animation 5s infinite alternate;
+}
+@keyframes bg-animation {
+  0% { background-position: left;}
+  100% {background-position: right;}
 }
 main p {
   font-size: 1.8rem;
@@ -200,7 +208,13 @@ main .main-quotes p:nth-child(2) {
     color: transparent;
     background-image: linear-gradient(140deg, var(--word-colors));
     -webkit-background-clip: text;
-    text-shadow: 1px 2px 1px white;
+    text-shadow: 1px 2px 1px white;background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+  }
+  @keyframes bg-animation {
+    0% { background-position: left;}
+    100% {background-position: right;}
+  
   }
  
   main .main-quotes {
